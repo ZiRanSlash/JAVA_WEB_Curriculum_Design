@@ -1,0 +1,46 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background:url(images/welcome.jpg);
+	background-attachment: fixed;
+	background-repeat: repeat;
+	background-size: 100% 100%;
+}
+
+a{
+	text-decoration: none;/*鍘讳笅鍒掔嚎*/
+}
+
+
+.Administrator{
+	right: 4vw;
+	top: 2vh;
+	position: left;
+	font-size: 1.5vw;
+	font-family: "仿宋";
+}
+.title{
+	position: relative;
+	top: 6vw;
+	/*font-family: "verdana";*/
+	font-family: "华文楷体";/*字体*/
+	font-weight: bold;/*粗体*/
+	font-size: 5vw;/*字号*/
+}
+.content{
+	position: relative;
+	top: 8vw;
+	/*font-family: "verdana";*/
+	font-family: "宋体";/*字体*/
+	font-weight: bold;/*粗体*/
+	font-size: 2vw;/*字号*/
+}
+.biaodan
+{
+	position: relative;
+	top: 10vw;
+
+}
