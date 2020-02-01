@@ -99,12 +99,15 @@ a{
 .news{
 	top: 0vw;
 	position: relative;	
-	left: 10vw;
+	left: 9.8vw;
 	width:80vw;
-	border:0.05vw solid #000
+	border:1vw solid rgba(136,201,211,0.5);
+	border-radius:20%;
 /*	top: 100px;*/
 }
 .news>p{
+	position:relative;
+	left:8vw;
 	font-weight: bold;
 	font-size: 1.5vw;
 	line-height: 2.1vw;
@@ -289,7 +292,7 @@ a{
 		}
 		
 		//算出总页数,要在除数结果的基础上加1
-		int totalPage=(total/flag)+1;
+		int totalPage=((total-1)/flag)+1;
 		
 		//确保target合法，非法数值转换为1让其访问首页
 		if(targetPage>totalPage||targetPage<1){

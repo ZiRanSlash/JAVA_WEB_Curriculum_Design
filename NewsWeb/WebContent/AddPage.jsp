@@ -58,7 +58,7 @@
   		&emsp;&emsp;&emsp;&emsp;&emsp;作者: <input type="text" name="author" />
   		<!--<input type="hidden" name="date" value=<%--=nowTime --%>>-->
   		<!-- <center><p>内容: <textarea name="date" cols="20" rows="1"/><%--=nowTime --%></textarea> </p></center> -->
-  		<center><p>内容: <textarea name="text" cols="200" rows="32"/>在此输入文本内容，在每一段后面加上&lt;/br&gt;</textarea> </p></center>
+  		<center><p>内容: <textarea name="text" cols="200" rows="32"/>在此输入文本内容，第一段的开头自动缩进两个字符，不需要添加额外空格，请在每一段后面加上&lt;br&gt;&amp;emsp;&amp;emsp;(分别为回车和下一段开头的两个空格)</textarea> </p></center>
   		<center><p><input type="submit" value="Submit" /></p></center>
 	</form>
 </body>
