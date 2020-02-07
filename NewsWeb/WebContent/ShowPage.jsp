@@ -10,7 +10,91 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/Show.css">
+	<style type="text/css">
+		*{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+
+body{
+	background: url(images/welcome2.jpg);
+	background-attachment:fixed;
+	background-repeat:repeat;
+	background-size:100% 100%;
+}
+
+.home{
+	position: absolute;
+	top: 1vw;
+	left: 20vw;
+	height: 2vw;
+	width: 6vw;
+	border-radius: 20%;
+	background-color: rgba(0,0,0,0.2);
+	border: 1px solid rgba(0,0,0,0.4);/*定义边框线的大小和颜色*/
+}
+.home>p{
+	color: red;
+	font-size: 1.4vw;
+	font-family: "楷体";
+}
+
+.p1{
+	font-size: 2.8vw;
+	font-weight: bold;
+	font-family: "宋体";
+	margin-top:3vw;
+}
+.p2{
+	font-size: 2.5vw;
+	font-weight: bold;
+	font-family: "宋体";
+	margin-top:1vw;
+}
+.p3{
+	font-size: 1.8vw;
+	font-weight: bold;
+	font-family: "仿宋";
+}
+
+.content{
+    /*background-color:white;*/
+    background-color: rgba(255,255,255,0.5);
+    width: 60vw;
+    height: auto;
+	top:2vh;
+	bottom: 2vh;
+    position:relative;
+    left:20vw;
+    border: 2px solid black;
+	border-radius:25px;
+
+    text-indent: 2em;
+	font-size: 1.1vw;
+	font-family: "宋体";
+	line-height: 1.5vw;
+}
+
+.id{
+	position: absolute;
+	left: 1vw;
+	top: 1vh;
+	font-family: "楷体";
+	font-size: 2vw;
+}
+
+
+.border{
+	position: relative;
+	height: 5vh;
+}
+		
+	</style>
 <!-- 定义风格-->
 
 <!-- 为了能在标签显示当前文章 把数据库连接放在title前面 -->
@@ -54,7 +138,7 @@
 		out.print("</head>");
 		
 		//背景图片
-		out.print("<body style=\"background:url(images/welcome2.jpg)\">"); 
+		out.print("<body>"); 
 		%>
 		<a href="HomePage.jsp">
 			<div class="home" align="center">
@@ -64,9 +148,9 @@
 		<%
 		if(flag==1){
 			//标题内容和作者日期
-			out.print("</br></br><h1><font face=\"宋体\"><center>"+rs.getString("title")+"</center></font></h1>");
-			out.print("<h2><font face=\"宋体\"><center>——<i>"+rs.getString("little_title")+"</i></center></font></h2>");
-			out.print("</br><h3><font face=\"仿宋\"><center>作者："+rs.getString("author")+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;日期："+rs.getString("date")+"</i></center></font></h3>");
+			out.print("</br></br><center><p class=\"p1\">"+rs.getString("title")+"</p></center>");
+			out.print("<center><p class=\"p2\">——<i>"+rs.getString("little_title")+"</i></p></center>");
+			out.print("</br><center><p class=\"p3\">作者："+rs.getString("author")+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;日期："+rs.getString("date")+"</p></center>");
 			
 			
 			//正文 采用div样式

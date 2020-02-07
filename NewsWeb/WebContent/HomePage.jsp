@@ -138,6 +138,11 @@ a{
 	font-size: 1.5vw;
 }
 
+.declare{
+	position: relative;
+	font-size: 1vw;
+}
+
 
 /*二级菜单*/
 .us ul li{
@@ -217,7 +222,7 @@ a{
 	<!-- 大标题 -->
 	
 	<div class="logo">
-   		<a href="https://bbs.gxuacm.net/"><img src="images/logo.jpg"></a>
+   		<a href="https://bbs.gxuacm.net/"><img src="images/logo.png"></a>
    	</div>
 	
 	<div class="us">
@@ -299,7 +304,7 @@ a{
 			targetPage=1;
 		}
 		
-		ResultSet rs = st.executeQuery(" select * from articles");
+		ResultSet rs = st.executeQuery(" select * from articles order by id desc");
 		
 	    if(con != null){  
 	        //out.print("服务器连接成功！<br />");          
@@ -375,7 +380,7 @@ a{
 	        
 	        
 	        rs.close();
-	        out.print("<br><br><br><br>");
+	        out.print("<br>");
 	    }
 	    else{  
 	        out.print("连接失败！");  
@@ -385,5 +390,10 @@ a{
 	    System.out.println(e);
 	}  
 %>
+
+	<div class="declare">
+		<p><center><b>@免责声明：本网站只作学习和交流使用，不作于任何商业用途，资料来源于互联网</b></center></p>
+		<p><center><b>资料已注明来源，若有任何问题，请联系管理员删除或修改</b></center></p>
+	</div>
 </body>
 </html>

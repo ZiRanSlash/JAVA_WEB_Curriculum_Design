@@ -18,7 +18,9 @@
 		int j=0;
 		try{
 			String idx = request.getParameter("id"); 
-		
+			System.out.println("删除文章的ID为："+idx);
+			int id=Integer.parseInt(idx);
+			System.out.print("整形的ID为："+id);
 			Connection con;
 			Class.forName("com.mysql.jdbc.Driver");
 	
@@ -26,7 +28,7 @@
 			
 			
 			//删除文章
-			String sql_delete="delete from articles where id="+idx+" limit 1 ";
+			String sql_delete="delete from articles where id='"+id+"'";
 			  //获取要删除的此id的数据库信息
 			  //int idx=Integer.parseInt(id);
 			  

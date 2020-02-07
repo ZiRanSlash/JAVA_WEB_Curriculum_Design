@@ -16,7 +16,8 @@
 		request.setCharacterEncoding("UTF-8"); 
 	
 	try{
-		String id = request.getParameter("id");
+		String idS = request.getParameter("id");
+		int id=Integer.parseInt(idS);
 		String username = request.getParameter("username");
 		
 		Connection con;
@@ -28,7 +29,7 @@
 		ResultSet rs = st.executeQuery(" select * from articles");
 		
 		while(rs.next()){
-			if(id.equals(rs.getString("id"))){
+			if(idS.equals(rs.getString("id"))){
 				break;
 			}
 		}
@@ -47,7 +48,7 @@
 					</form>
 					&emsp;&emsp;&emsp;&emsp;
 					<form form action="Delete.jsp" name="" method="post">
-						<input type="hidden" name="id" value=id>
+						<input type="hidden" name="id" value=<%=idS %>>
 						<input type="submit" value="删除">
 					</form>
 				</table>

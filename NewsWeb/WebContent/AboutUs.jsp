@@ -8,7 +8,7 @@
 <html>
 <style type="text/css">
 	body{
-		background:url(images/welcome.jpg);
+		background:url(images/welcome2.jpg);
 		background-attachment: fixed;
 		background-repeat: repeat;
 		background-size: 100% 100%;
@@ -46,7 +46,7 @@
 
 <title>关于我们</title>
 </head>
-<body style="background:url(images/welcome2.jpg)">
+<body>
 	<% 
 	try {
 		String idS = request.getParameter("id"); 
@@ -77,7 +77,7 @@
    			<br><br><br><br>
    			
 			<div class="photo">
-   				<img src="images/us<%=id %>.jpg">
+   				<img src="images/us<%=id %>.png">
    			</div>
    			
    			

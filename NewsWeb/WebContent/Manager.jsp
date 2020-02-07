@@ -21,7 +21,7 @@
 	<center><h1>文章编辑页面</h1></center>
 	
 	<center>
-	<font size="5" color=""><a href="AddPage.jsp" >增加文章</a></font>
+	<font size="5" color=""><a href="AddPage.jsp" target="_blank">增加文章</a></font>
 	</center>
 	
 <%
@@ -33,7 +33,7 @@
 
 
 		Statement st = con.createStatement();
-		ResultSet rs = st.executeQuery(" select * from articles");
+		ResultSet rs = st.executeQuery(" select * from articles order by id desc");
 	
 	    if(con != null){  
 	        //out.print("服务器连接成功！<br />");          
@@ -43,11 +43,11 @@
 	        	out.print("<center><h3>");
 	        	int id=rs.getInt("id");
 	        	//out.print("<a href=\"Editer.jsp?id="+id+" \"target=\"_blank\">");
-	        	out.print(rs.getString("title")+"——<i>"+rs.getString("little_title")+"</i>"); //将查询结果输出
+	        	out.print(rs.getString("title")+"——<i>"+rs.getString("little_title")+"</i> [ID:"+rs.getInt("id")+"]"); //将查询结果输出
 	        	out.print("&emsp;&emsp;&emsp;<a href=\"Editer.jsp?id="+id+" \"target=\"_blank\">[编辑]</a>");
 	        	out.print("&emsp;&emsp;&emsp;<a href=\"DeleteCheck.jsp?id="+id+"&username="+name+" \"target=\"_blank\">[删除]</a>");
 	        	out.print("<br />"); 
-	        	out.print("</h4></center>");
+	        	out.print("</h3></center>");
 	        	counter++;
 	   		}
 	        if(counter==0){
